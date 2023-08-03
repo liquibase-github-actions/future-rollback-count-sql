@@ -8,7 +8,7 @@ steps:
 - uses: actions/checkout@v3
 - uses: liquibase-github-actions/future-rollback-count-sql@v4.23.0
   with:
-    # The root changelog
+    # The root changelog file
     # string
     # Required
     changelogFile: ""
@@ -23,7 +23,17 @@ steps:
     # Required
     url: ""
 
-    # Changeset contexts to match
+    # Fully-qualified class which specifies a ChangeExecListener
+    # string
+    # Optional
+    changeExecListenerClass: ""
+
+    # Path to a properties file for the ChangeExecListenerClass
+    # string
+    # Optional
+    changeExecListenerPropertiesFile: ""
+
+    # Context string to use for filtering
     # string
     # Optional
     contexts: ""
@@ -48,7 +58,7 @@ steps:
     # Optional
     driverPropertiesFile: ""
 
-    # Changeset labels to match
+    # Label expression to use for filtering
     # string
     # Optional
     labelFilter: ""
@@ -63,12 +73,12 @@ steps:
     # Optional
     outputDefaultSchema: ""
 
-    # The database password
+    # Password to use to connect to the database
     # string
     # Optional
     password: ""
 
-    # The database username
+    # Username to use to connect to the database
     # string
     # Optional
     username: ""
