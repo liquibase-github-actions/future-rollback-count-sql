@@ -6,7 +6,7 @@ Generates SQL to sequentially revert <count> number of changes
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/future-rollback-count-sql@v4.25.0
+- uses: liquibase-github-actions/future-rollback-count-sql@v4.25.1
   with:
     # The root changelog file
     # string
@@ -95,7 +95,7 @@ The liquibase future rollback count sql action accepts all valid liquibase globa
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/future-rollback-count-sql@v4.25.0
+  - uses: liquibase-github-actions/future-rollback-count-sql@v4.25.1
     with:
       changelogFile: ""
       count: ""
